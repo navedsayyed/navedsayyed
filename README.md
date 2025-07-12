@@ -1,11 +1,9 @@
 <h1 align="center">Hi 👋, I'm Naved A. Sayyed</h1>
-<h3 align="center">Aspiring Java Backend Developer | Learning Spring Boot & APIs | CSE '26</h3>
+<h3 align="center">Aspiring Java Backend Developer | CSE '26</h3>
 
 <!-- <img align="right" alt="coding" width="100" src="https://media.tenor.com/pfsnQSfR650AAAAd/one-piece.gif"> -->
 
 - 🔭 I’m currently working on **Java Projects**
-
-- 🌱 I’m currently learning **Core Java, OOP, Spring Boot, REST APIs**
 
 - 👨‍💻 My portfolio and work will be available soon
 
