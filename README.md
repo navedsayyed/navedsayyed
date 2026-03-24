@@ -14,4 +14,6 @@
 
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=navedsayyed&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
 
+[![GitHub Commit Activity](https://github-readme-activity-graph.vercel.app/graph?username=navedsayyed&theme=react-dark&bg_color=1a1b27&color=38bdae&line=70a5fd&point=bf91f3&area=true&hide_border=false&custom_title=Naved%27s%20Commit%20Activity)](https://github.com/navedsayyed)
+
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
