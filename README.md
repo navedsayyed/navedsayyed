@@ -31,13 +31,6 @@ const naved = {
   <a href="mailto:navedas9356@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
 </p>
 
----
-
-## 🏆 GitHub Trophies
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=navedsayyed&theme=tokyonight&no-frame=false&no-bg=false&margin-w=4&row=1" alt="trophies"/>
-</p>
 
 ---
 
