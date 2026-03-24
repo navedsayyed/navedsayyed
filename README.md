@@ -1,7 +1,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Naved%20Sayyed&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Full-Stack%20%7C%20React%20%7C%20React%20Native%20%7C%20AI%20Integration&descAlignY=55&descSize=16" width="100%"/>
 
 <p align="left">
-  <img src="https://views-counter.vercel.app/badge?pageId=navedsayyed&leftText=Profile%20views&leftColor=lightgrey&rightColor=red" />
+  <img src="https://komarev.com/ghpvc/?username=navedsayyed&label=Profile%20views&color=ff4d4d&style=flat" />
   <img src="https://img.shields.io/github/followers/navedsayyed?label=Follow&style=social" />
 </p>
 
