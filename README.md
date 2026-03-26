@@ -1,12 +1,3 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Naved%20Sayyed&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Full-Stack%20%7C%20React%20%7C%20React%20Native%20%7C%20AI%20Integration&descAlignY=55&descSize=16" width="100%"/>
-
-<p align="left">
-  <img src="https://komarev.com/ghpvc/?username=navedsayyed&label=Profile%20views&color=ff4d4d&style=flat" />
-  <img src="https://img.shields.io/github/followers/navedsayyed?label=Follow&style=social" />
-</p>
-
----
-
 ## 👋 About Me
 
 ```typescript
@@ -18,17 +9,24 @@ const naved = {
   funFact:    "Building production-ready apps while still in engineering 🚀",
   contact:    "navedas9356@gmail.com",
 };
+
 ```
+<p align="left">
+  <img src="https://komarev.com/ghpvc/?username=navedsayyed&label=Profile%20views&color=ff4d4d&style=flat" />
+  <img src="https://img.shields.io/github/followers/navedsayyed?label=Follow&style=social" />
+</p>
+
+
 
 ---
 
 ## 🌐 Connect With Me
 
 <p align="left">
-  <a href="https://instagram.com/navedsayyed._"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white"/></a>
   <a href="https://www.linkedin.com/in/naved-sayyed"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-  <a href="https://x.com/navedsayyed_"><img src="https://img.shields.io/badge/X-black.svg?style=for-the-badge&logo=X&logoColor=white"/></a>
   <a href="mailto:navedas9356@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+  <a href="https://x.com/navedsayyed_"><img src="https://img.shields.io/badge/X-black.svg?style=for-the-badge&logo=X&logoColor=white"/></a>
+  <a href="https://instagram.com/navedsayyed._"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white"/></a>
 </p>
 
 
@@ -124,6 +122,3 @@ const naved = {
   <img src="https://readme-jokes.vercel.app/api?theme=tokyonight" alt="Jokes Card"/>
 </p>
 
----
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%"/>
