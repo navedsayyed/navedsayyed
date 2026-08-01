@@ -6,7 +6,7 @@ const naved = {
   location:   "India 🇮🇳",
   currently:  ["React Native", "Backend Architecture", "AI Integration"],
   collab:     ["React / React Native projects", "Open-source contributions"],
-  funFact:    "Building production-ready apps while still in engineering 🚀",
+  funFact:    "Building production-ready apps 🚀",
   contact:    "navedas9356@gmail.com",
 };
 
