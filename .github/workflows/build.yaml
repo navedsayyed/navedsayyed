@@ -4,7 +4,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "0 4 * * *"
+    - cron: "30 19 * * *"   # 19:30 UTC = 01:00 AM IST
 jobs:
   build:
     runs-on: ubuntu-latest
