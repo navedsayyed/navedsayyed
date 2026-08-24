@@ -40,11 +40,43 @@ def format_plural(unit):
     return 's' if unit != 1 else ''
 
 
+TRANSIENT_STATUS = (429, 500, 502, 503, 504)
+
+
+def post_graphql(query, variables, retries=5):
+    """
+    POSTs to the GraphQL API, retrying transient upstream failures with an
+    exponential backoff. GitHub serves 502s often enough that a single hiccup
+    used to abort the whole run. Returns the final response - callers still
+    decide how to treat a non-200 status.
+    """
+    delay = 2
+    for attempt in range(retries):
+        outcome = None
+        try:
+            outcome = requests.post('https://api.github.com/graphql', json={'query': query, 'variables': variables}, headers=HEADERS, timeout=30)
+        except requests.exceptions.RequestException as error:
+            outcome = error
+        else:
+            if outcome.status_code not in TRANSIENT_STATUS:
+                return outcome
+        if attempt == retries - 1:
+            if isinstance(outcome, Exception): raise outcome
+            return outcome
+        wait = delay
+        if not isinstance(outcome, Exception):
+            try: wait = max(wait, int(outcome.headers.get('Retry-After', 0)))
+            except (TypeError, ValueError): pass
+        print('   transient failure, retrying in {}s ({}/{})'.format(wait, attempt + 1, retries - 1))
+        time.sleep(wait)
+        delay *= 2
+
+
 def simple_request(func_name, query, variables):
     """
     Returns a request, or raises an Exception if the response does not succeed.
     """
-    request = requests.post('https://api.github.com/graphql', json={'query': query, 'variables':variables}, headers=HEADERS)
+    request = post_graphql(query, variables)
     if request.status_code == 200:
         return request
     raise Exception(func_name, ' has failed with a', request.status_code, request.text, QUERY_COUNT)
@@ -144,7 +176,7 @@ def recursive_loc(owner, repo_name, data, cache_comment, addition_total=0, delet
         }
     }'''
     variables = {'repo_name': repo_name, 'owner': owner, 'cursor': cursor}
-    request = requests.post('https://api.github.com/graphql', json={'query': query, 'variables':variables}, headers=HEADERS) # I cannot use simple_request(), because I want to save the file before raising Exception
+    request = post_graphql(query, variables) # I cannot use simple_request(), because I want to save the file before raising Exception
     if request.status_code == 200:
         if request.json()['data']['repository']['defaultBranchRef'] != None: # Only count commits if repo isn't empty
             return loc_counter_one_repo(owner, repo_name, data, cache_comment, request.json()['data']['repository']['defaultBranchRef']['target']['history'], addition_total, deletion_total, my_commits)
