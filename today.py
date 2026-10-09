@@ -20,7 +20,10 @@ def daily_readme(birthday):
     Returns the length of time since I was born
     e.g. 'XX years, XX months, XX days'
     """
-    diff = relativedelta.relativedelta(datetime.datetime.today(), birthday)
+    # The Actions runner is on UTC, so use IST or the date lags a day behind
+    ist = datetime.timezone(datetime.timedelta(hours=5, minutes=30))
+    today = datetime.datetime.now(ist).replace(tzinfo=None)
+    diff = relativedelta.relativedelta(today, birthday)
     return '{} {}, {} {}, {} {}{}'.format(
         diff.years, 'year' + format_plural(diff.years), 
         diff.months, 'month' + format_plural(diff.months), 
@@ -377,7 +380,9 @@ def justify_format(root, element_id, new_text, length=0):
         new_text = f"{'{:,}'.format(new_text)}"
     new_text = str(new_text)
     find_and_replace(root, element_id, new_text)
-    just_len = max(0, length - len(new_text))
+    # Emoji like 🎂 render about two characters wide in the monospace font
+    text_width = len(new_text) + sum(1 for ch in new_text if ord(ch) > 0xFFFF)
+    just_len = max(0, length - text_width)
     if just_len <= 2:
         dot_map = {0: '', 1: ' ', 2: '. '}
         dot_string = dot_map[just_len]
